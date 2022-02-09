@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>common event</title>
+</head>
+<body>
+    <p id="clicking-method"> </p>
+    <button onclick="handleJustFunctionClick()" >Just Function</button>
+    <button id="handleEvent" >Direct Add Event Listener</button>
+
+    <script>
+        // using function
+        function handleJustFunctionClick(){
+            const p = document.getElementById('clicking-method');
+            p.innerText = 'set by using method';
+        }
+
+        // direct adEventListener
+        document.getElementById('handleEvent').addEventListener('click', function(){
+            const p = document.getElementById('clicking-method');
+            p.innerText = ' Set by direct add event listener';
+        })
+
+    </script>
+</body>
+</html>
